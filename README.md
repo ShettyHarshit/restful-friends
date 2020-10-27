@@ -15,13 +15,11 @@ CREATE TABLE IF NOT EXISTS `user_friends` (`createdAt` DATETIME NOT NULL, `updat
 
 ## TESTING APIS VIA POSTMAN
 
-### Once we start the server, we should see the welcome message we specified in our index.js, if we make a GET request to '/' using Postman or your browser.
+### Once we start the server, we should see the welcome message we specified in our index.js, if we make a GET request to '/' using Postman.
 
-### For all our APIs we'll make GET requests to the '/api'.
+### In Postman, we can view all the users by making a GET request to '/api/users'.
 
-### In Postman we can view all the users by making a GET request to '/api/users'.
-
-### Making a GET request to 'api/users/:id/friends' would return the given user with a list of the user's friends.
+### Making a GET request to '/api/users/:id/friends' would return the given user with a list of the user's friends.
 
 ### We can test our APIs by using the following tests for the API status and if the GET request to '/api/users' return an array
 
@@ -37,7 +35,7 @@ pm.test("is an Array", () =>
 
 ```
 
-### We can test the other to APIs for if the response body is an Object
+### We can test the other two APIs to check if the response body is an Object
 
 ```
 
@@ -53,7 +51,7 @@ pm.test("is an Object", () =>
 
 ## TESTS
 
-### We can write unit tests for our APIs using Mocha to check GET /users always responds with an array of user objects
+### We can write unit tests for our APIs using Mocha + Chai to check if GET /users always responds with an array of user objects
 
 ```
 describe('/GET users', () => {
